@@ -14,11 +14,17 @@ provider "aws" {
   secret_key = var.aws_secret_key
 }
 
-# # Create a VPC
-# module "vpc" {
-#   source       = "./aws_vpc/"
-#   cidr_network = "192.168.0.0/16"
-# }
+# Create a VPC
+module "vpc" {
+  source       = "github.com/jhyun0913/tf-aws-vpc.git"
+
+}
+
+module "keypair" {
+  source       = "github.com/jhyun0913/tf-aws-keypair.git"
+
+}
+
 
 # module "subnet" {
 #   source     = "./aws_subnet/"
@@ -26,10 +32,7 @@ provider "aws" {
 #   vpc_id     = module.vpc.vpc_id
 # }
 
-# module "keypair" {
-#   source = "./aws_keypair/"
-#   public_key = ""
-# }
+
 
 # # Create a Private Subnet
 # resource "aws_subnet" "terra_private_subnet" {
