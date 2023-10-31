@@ -4,3 +4,6 @@
 [submodule "tf-aws-keypair"]
 	path = tf-aws-keypair
 	url = https://github.com/jhyun0913/tf-aws-keypair.git
+[submodule "tf-aws-subnet"]
+	path = tf-aws-subnet
+	url = https://github.com/jhyun0913/tf-aws-subnet.git
